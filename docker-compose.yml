@@ -11,7 +11,8 @@ services:
       - 8000
   nginx:
     build: ./nginx
-    volumes: 097576328399.dkr.ecr.us-east-2.amazonaws.com/django_docker_aws:django_docker_aws_nginx
+    image: 097576328399.dkr.ecr.us-east-2.amazonaws.com/django_docker_aws:django_docker_aws_nginx
+    volumes:
       - static_volume:/usr/src/app/static
     ports:
       - 8000:80
@@ -19,5 +20,7 @@ services:
       - web
 volumes:
   static_volume:
+
+
 
 
